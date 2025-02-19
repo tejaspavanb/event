@@ -12,33 +12,37 @@ Box.addEventListener("mouseout",function(event){
     event.target.style.backgroundColor=" hsl(251, 100%, 18%)";
     event.target.textContent="😊 Come to Me !";
 })
-top=0;
-left=0;
+x=0;
+y=0;
+movement=10;
 document.addEventListener("keydown",function(event){
     Box.style.backgroundColor="hsl(251, 93.00%, 39.40%)";
     Box.textContent="Yayiii, I can Dance 😍";
-    console.log(event.key);
+    
     if(event.key.startsWith("Arrow")){
+        console.log(event.key);
         switch(event.key){
             case "ArrowUp":
-                top-=10;
+                y-=movement;
                 break;
             case "ArrowDown":
-                top+=10;
+                y+=movement;
                 break;
-            case "ArrorLeft":
-                left-=10;
+            case "ArrowLeft":
+                x-=movement;
                 break;
             case "ArrowRight":
-                left+=10;
+                x+=movement;
                 break;
-            
+         
         }
-        Box.style.top=top;
-        Box.style.left=left;
+        console.log(Box.style.top,Box.style.left);
+        Box.style.top=y+"px";
+        Box.style.left=x+"px"; 
+        
     }
 })
 document.addEventListener("keyup",function(event){
-    event.target.style.backgroundColor=" hsl(251, 100%, 18%)";
-    event.target.textContent="😊 Come to Me !";
+    Box.style.backgroundColor=" hsl(251, 100%, 18%)";
+    Box.textContent="😊 Come to Me !";
 })
