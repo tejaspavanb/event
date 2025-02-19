@@ -1,0 +1,16 @@
+#Box{
+    font-size: 3.5rem;
+    background-color: hsl(251, 100%, 18%);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    
+}
+body{
+    margin: 0;
+
+}
